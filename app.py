@@ -92,10 +92,10 @@ def main():
 if __name__ == "__main__":
     main()
 
-!streamlit run /usr/local/lib/python3.10/dist-packages/colab_kernel_launcher.py
+streamlit run /usr/local/lib/python3.10/dist-packages/colab_kernel_launcher.py
 
-! pip install streamlit-webrtc
+#! pip install streamlit-webrtc
 
-!pip install streamlit-webrtc>=0.51.0
+#!pip install streamlit-webrtc>=0.51.0
 
-!streamlit run app.py & npx localtunnel --port 8501
+#!streamlit run app.py & npx localtunnel --port 8501
