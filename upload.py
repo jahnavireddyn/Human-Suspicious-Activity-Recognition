@@ -73,8 +73,9 @@ def get_binary_file_downloader_html(file_path, title="Download File"):
 
 def main():
 
-    st.title("Human Activity Recognition - Fight Detection")
-    st.caption("Upload a video to detect as 'fight' or no-fight'")
+    st.title("Human Activity Recognition")
+    st.title("Fight Detection")
+    st.header("Upload a video to detect as 'fight' or no-fight'")
 
     uploaded_file = st.file_uploader("Upload a video", type=['mp4'])
     if uploaded_file is not None:
