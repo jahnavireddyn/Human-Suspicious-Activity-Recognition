@@ -45,9 +45,11 @@ class VideoTransformer(VideoTransformerBase):
         return predicted_class_name
 
 def main():
-    st.title("Human Acrivity Recognition")
+    st.title("Human Activity Recognition")
     st.header("Fight Detection - Live Camera")
-    s = 
+    s = f"<p style='font-size:24px;font-family:Courier;'>Detect 'fight' or 'no-fight' through live web camera.</p>"
+    st.markdown(s, unsafe_allow_html=True)
+    
     webrtc_ctx = webrtc_streamer(key="example", video_transformer_factory=VideoTransformer, async_transform=True)
 
 if __name__ == "__main__":
