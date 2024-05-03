@@ -8,7 +8,7 @@ import base64
 from keras.models import load_model
 
 # Load the model
-model_file_path = "/Users/jahnavireddy/Desktop/HARFD/ProjectCode/modharfd.h5"  # Change this path accordingly
+model_file_path = "modharfd.h5"  # Change this path accordingly
 convlrcn_model = load_model(model_file_path)
 
 # Define constants
@@ -45,8 +45,9 @@ class VideoTransformer(VideoTransformerBase):
         return predicted_class_name
 
 def main():
-    st.title("Human Activity Prediction")
-
+    st.title("Human Acrivity Recognition")
+    st.header("Fight Detection - Live Camera")
+    s = 
     webrtc_ctx = webrtc_streamer(key="example", video_transformer_factory=VideoTransformer, async_transform=True)
 
 if __name__ == "__main__":
