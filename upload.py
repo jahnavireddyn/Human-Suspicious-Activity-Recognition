@@ -73,9 +73,7 @@ def get_binary_file_downloader_html(file_path, title="Download File"):
 
 def main():
 
-    t = f"<p style='font-faily:sans-serif;'Human Activity Recognition - Fight Detection'</p>"
-    st.markdown(t,unsafe_allow_html = True)
-   # st.title("Human Activity Recognition - Fight Detection")
+    st.title("Human Activity Recognition - Fight Detection")
     s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
     st.markdown(s, unsafe_allow_html=True)
 
