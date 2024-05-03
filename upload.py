@@ -75,27 +75,26 @@ def main():
 
     st.title("Human Activity Recognition - Fight Detection")
     st.link_button("Live Camera", "https://fightdetectioncam.streamlit.app") 
-    s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
-    st.markdown(s, unsafe_allow_html=True)
+    
     if (st.link_button("Local Device", "https://harfightdetection.streamlit.app") ):
+        s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
+        st.markdown(s, unsafe_allow_html=True)
         uploaded_file = st.file_uploader("Upload a video", type=['mp4'])
-    if uploaded_file is not None:
-        test_videos_directory = 'test_videos'
-        os.makedirs(test_videos_directory, exist_ok=True)
-        video_file_path = os.path.join(test_videos_directory, uploaded_file.name)
-        with open(video_file_path, "wb") as f:
-            f.write(uploaded_file.read())
-        st.success(f"You uploaded: {uploaded_file.name}")
+        if uploaded_file is not None:
+            test_videos_directory = 'test_videos'
+            os.makedirs(test_videos_directory, exist_ok=True)
+            video_file_path = os.path.join(test_videos_directory, uploaded_file.name)
+            with open(video_file_path, "wb") as f:
+                f.write(uploaded_file.read())
+            st.success(f"You uploaded: {uploaded_file.name}")
 
-        output_video_file_path = f'{test_videos_directory}/{uploaded_file.name}-Output-SeqLen{SEQUENCE_LENGTH}.mp4'
-        output_video_file_path = perform_action_recognition(video_file_path, output_video_file_path)
+            output_video_file_path = f'{test_videos_directory}/{uploaded_file.name}-Output-SeqLen{SEQUENCE_LENGTH}.mp4'
+            output_video_file_path = perform_action_recognition(video_file_path, output_video_file_path)
 
-        st.success("Prediction complete! You can download the output video below.")
-        st.markdown(get_binary_file_downloader_html(output_video_file_path, "Download Predicted Video"), unsafe_allow_html=True)
+            st.success("Prediction complete! You can download the output video below.")
+            st.markdown(get_binary_file_downloader_html(output_video_file_path, "Download Predicted Video"), unsafe_allow_html=True)
 
         
-    s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
-    st.markdown(s, unsafe_allow_html=True)
     
     
 
