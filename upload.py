@@ -75,7 +75,7 @@ def main():
 
     
     st.title("Human Activity Recognition - Fight Detection")
-    s = f"<p style='font-size:42px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
+    s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
     st.markdown(s, unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Upload a video", type=['mp4'])
