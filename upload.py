@@ -73,10 +73,10 @@ def get_binary_file_downloader_html(file_path, title="Download File"):
 
 def main():
 
-    s = f"<p style='font-size:86px;font-family:Courier;'>Fight Detection</p>"
-    st.markdown(s, unsafe_allow_html=True)
+    
     st.title("Human Activity Recognition - Fight Detection")
-    st.header("Upload a video to detect as 'fight' or no-fight'")
+    s = f"<p style='font-size:42px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
+    st.markdown(s, unsafe_allow_html=True)
 
     uploaded_file = st.file_uploader("Upload a video", type=['mp4'])
     if uploaded_file is not None:
