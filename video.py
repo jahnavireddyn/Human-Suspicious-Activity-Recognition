@@ -8,7 +8,7 @@ import base64
 from keras.models import load_model
 
 # Load the model
-model_file_path = "/Users/jahnavireddy/Desktop/HARFD/ProjectCode/modharfd.h5"  # Change this path accordingly
+model_file_path = "modharfd.h5"  # Change this path accordingly
 convlrcn_model = load_model(model_file_path)
 
 # Define constants
