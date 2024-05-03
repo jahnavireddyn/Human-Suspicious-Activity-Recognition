@@ -26,3 +26,4 @@ watchdog
 tensorflow
 opencv-python-headless
 keras
+streamlit_webrtc
