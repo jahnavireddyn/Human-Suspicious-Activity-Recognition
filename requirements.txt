@@ -40,7 +40,6 @@ tzdata==2024.1
 urllib3==2.2.1
 watchdog==4.0.0
 tensorflow==2.16.1
-opencv-contrib-python-headless
+opencv_contrib_python
 keras==3.3.3
-opencv-python
 
