@@ -74,8 +74,11 @@ def get_binary_file_downloader_html(file_path, title="Download File"):
 def main():
 
     st.title("Human Activity Recognition - Fight Detection")
+    URL = "https://fightdetectioncam.streamlit.app"
+    st.link_button(LIVE CAMERA, url, *, help=None, type="secondary", disabled=False, use_container_width=False)
     s = f"<p style='font-size:24px;font-family:Courier;'>Upload a video to detect as 'fight' or no-fight'</p>"
     st.markdown(s, unsafe_allow_html=True)
+    
 
     uploaded_file = st.file_uploader("Upload a video", type=['mp4'])
     if uploaded_file is not None:
