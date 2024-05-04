@@ -33,7 +33,7 @@ class VideoTransformer(VideoTransformerBase):
             predicted_class_name = self.predict_activity(self.frames_queue)
 
             # Draw predicted class name on frame
-            cv2.putText(img, predicted_class_name, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(img, predicted_class_name, (10, 30), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 255, 0), 2)
 
         return img
 
