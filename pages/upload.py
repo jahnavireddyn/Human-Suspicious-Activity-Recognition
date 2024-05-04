@@ -52,9 +52,9 @@ def perform_action_recognition(video_file_path, output_file_path):
             predicted_class_name = CLASSES_LIST[predicted_label]
 
             # Draw predicted class name on frame
-            cv2.putText(frame, predicted_class_name, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(frame, predicted_class_name, (10, 30), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 255, 0), 2)
             # Draw predicted class name on frame with black background box
-            text_size = cv2.getTextSize(predicted_class_name, cv2.FONT_HERSHEY_SIMPLEX, 1, 2)[0]
+            text_size = cv2.getTextSize(predicted_class_name, cv2.FONT_HERSHEY_TRIPLEX, 1, 2)[0]
             text_x, text_y = 10, 30  # Position of the text
             padding = 5  # Padding around the text
             box_coords = ((text_x, text_y + padding), (text_x + text_size[0] + padding * 2, text_y - text_size[1] - padding))
@@ -63,7 +63,7 @@ def perform_action_recognition(video_file_path, output_file_path):
             cv2.rectangle(frame, box_coords[0], box_coords[1], (0, 0, 0), -1)
 
             # Draw the predicted class name on the frame
-            cv2.putText(frame, predicted_class_name, (text_x + padding, text_y), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+            cv2.putText(frame, predicted_class_name, (text_x + padding, text_y), cv2.FONT_HERSHEY_TRIPLEX, 1, (0, 255, 0), 2)
 
         video_writer.write(frame)
 
